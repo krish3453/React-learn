@@ -9,11 +9,11 @@ export function Card({ data }) {
 
                 <div
                     key={singleitem.id}
-                    className="bg-gray-500 w-[25%] h-[500px] p-4"
+                    className="bg-gray-500 w-[25%] h-125 p-4"
 
                 >
 
-                    <img src={singleitem.thumbnail} className='bg-amber-100 aspect-square w-[100%] h-[50%] object-cover rounded-2xl shadow-2xl' alt="" />
+                    <img src={singleitem.thumbnail} className='bg-amber-100 aspect-square w-full h-[50%] object-cover rounded-2xl shadow-2xl' alt="" />
                     <div  className="flex items-center justify-between">
                         <h2 className="line-clamp-1">{singleitem.title}</h2>
                         <p>${singleitem.price}</p>
