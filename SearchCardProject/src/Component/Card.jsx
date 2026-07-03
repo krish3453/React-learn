@@ -1,31 +1,26 @@
 
 
 
-export function Card({data}) {
-    return(
-        <div style={{display:'flex',flexWrap:"wrap",gap:"10px"}}>
+export function Card({ data }) {
+    return (
+        <div className="mt-10 flex flex-wrap justify-center w-[80%] gap-4 ">
 
-            {data.map(singleitem=>(
+            {data.map(singleitem => (
 
-                <div  
-                key={singleitem.id}
+                <div
+                    key={singleitem.id}
+                    className="bg-gray-500 w-[25%] h-[500px] p-4"
 
-                style={
-                    {
-                        backgroundColor:"grey",
-                        color:"black", 
-                        width:"350px",
-                        height:"450px",
-                        overflow:"hidden"
-                        }
-                        }>
+                >
 
-                <img src={singleitem.thumbnail} style={{width:"250px", display: "block",margin: "0 auto"}} alt=""/>
-                <h2>{singleitem.title}</h2>
-                <p>${singleitem.price}</p>
-                <p>{singleitem.description}</p>
-            </div>
-                
+                    <img src={singleitem.thumbnail} className='bg-amber-100 aspect-square w-[100%] h-[50%] object-cover rounded-2xl shadow-2xl' alt="" />
+                    <div  className="flex items-center justify-between">
+                        <h2 className="line-clamp-1">{singleitem.title}</h2>
+                        <p>${singleitem.price}</p>
+                    </div>
+                    <p className="line-clamp-3">{singleitem.description}</p>
+                </div>
+
             ))}
 
         </div>
